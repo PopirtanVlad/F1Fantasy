@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url("../images/login.jpg");
+
+    /* Control the height of the image */
+    min-height: 380px;
+    width: 100%;
+    height: 840px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #e50000;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 7%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}

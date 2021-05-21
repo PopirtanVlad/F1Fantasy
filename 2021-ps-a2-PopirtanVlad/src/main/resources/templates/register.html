@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Form</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{register.css}">
+
+</head>
+<body>
+<form action="#" th:action="@{/registerPressed}" th:object="${userDto}" method="post">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item" >
+                <a  href="login" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active" style="background-color: #e50000;" >Register</a>
+            </li>
+        </ul>
+        <h1  align="center">Register</h1>
+
+
+
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Username" name="username" th:field="*{user_name}" required>
+
+        <label><b>Email</b></label>
+        <input type="email" placeholder="Your Email Address" name="email" th:field="*{user_email}" required>
+
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Your Password" name="password" th:field="*{user_password}" required>
+
+        <label for="birthday">Date of birth:</label>
+        <input type="date" id="birthday" name="birthday" th:field="*{user_birthdate}" required>
+
+        <label>
+            <input type="checkbox" name="I'm not a robot">I'm not a robot
+        </label>
+        <button type="submit" class="btn">Register</button>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <!--link rel="stylesheet" th:href="@{my_teams.css}">-->
+<style>
+
+
+    .table {
+        display: table;   /* Allow the centering to work */
+        margin: 0 auto;
+    }
+
+    ul#horizontal-list {
+        min-width: 696px;
+        list-style: none;
+        padding-top: 20px;
+    }
+    ul#horizontal-list li {
+        display: inline;
+    }
+    /* The sidebar menu */
+    .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #e50000;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #dddddd;
+    display: block;
+    }
+
+
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+    background-color: darkred;
+    }
+
+    /* Style page content */
+    .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+    </style>
+</head>
+
+
+<body>
+<div class="sidenav">
+    <a class="active" href="my_teams">Teams</a>
+    <a href="leagues">Leagues</a>
+    <a href="#">Races</a>
+    <a href="#">Points Scoring</a>
+
+    <form th:action="@{/profile/downloadInfo}" th:method="post">
+        <p style="color: white; margin: 8%">Download Points Scoring in PDF or TXT format</p>
+        <select style="margin-left: 25% "name="pointsScoring">
+            <option> TXT </option>
+            <option> PDF</option>
+        </select><br>
+        <button style="margin-left: 18%" type="submit" class="btn">Download</button>
+    </form>
+</div>
+
+<!-- Page content -->
+<div>
+    <div class="table">
+    <ul id="horizontal-list">
+        <li style="display:inline-block; width:452px;height:584px;border:1px solid #000;">
+            <div th:if="${not #lists.isEmpty(team1)}">
+                <table>
+                    <tr>
+                        <th>Driver</th>
+                        <th>Points</th>
+                    </tr>
+                    <tr th:each="driver : ${team1}">
+                        <td th:text="${driver.driver_name}"></td>
+                        <td th:text="${driver.driver_points}"></td>
+                    </tr>
+                </table>
+            </div>
+            <div th:if="${#lists.isEmpty(team1)}">
+                <button style="align-self:center" type="submit">Create team</button>
+            </div>
+        </li>
+
+        <li style="display:inline-block; width:452px;height:584px;border:1px solid #000;">
+        <div th:if="${not #lists.isEmpty(team2)}">
+            <table>
+                <tr>
+                    <th>Driver</th>
+                    <th>Points</th>
+                </tr>
+                <tr th:each="driver : ${team2}">
+                    <td th:text="${driver.driver_name}"></td>
+                    <td th:text="${driver.driver_points}"></td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${#lists.isEmpty(team2)}">
+            <button style="align-self:center" type="submit">Create team</button>
+        </div>
+        </li>
+        <li style="display:inline-block; width:452px;height:584px;border:1px solid #000;">
+        <div th:if="${not #lists.isEmpty(team3)}">
+            <table>
+                <tr>
+                    <th>Driver</th>
+                    <th>Points</th>
+                </tr>
+                <tr th:each="driver : ${team3}">
+                    <td th:text="${driver.driver_name}"></td>
+                    <td th:text="${driver.driver_points}"></td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${#lists.isEmpty(team3)}">
+            <button style="align-self:center" type="submit">Create team</button>
+        </div>
+        </li>
+    </ul>
+    </div>
+</div>
+</body>
+</html>

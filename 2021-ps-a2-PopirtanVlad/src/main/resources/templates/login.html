@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{login.css}">
+</head>
+<body>
+<form action="#" th:action="@{/loginPressed}" th:object="${userDto}" method="post">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item" >
+                <a  href="#" class="nav-link active" style="background-color: #e50000;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="register" class="nav-link" >Register</a>
+            </li>
+        </ul>
+
+        <h1  align="center">Login</h1>
+
+        <label><b>Email</b></label>
+        <input type="email" placeholder="Your Email Address" name="email" th:field="*{user_email}" required>
+
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Your Password" name="password" th:field="*{user_password}" required>
+
+        <a th:href="@{forgot_password}">Forgot my password</a>
+
+        <button type="submit" class="btn">Login</button>
+    </div>
+</form>
+
+</body>
+</html>

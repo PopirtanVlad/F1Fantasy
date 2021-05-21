@@ -1,0 +1,18 @@
+Qualifying
+Q1 Finish								1 pt
+Q2 Finish								2 pts
+Q3 Finish								3 pts
+Qualified ahead of team mate (driver only)				2 pts
+Did not qualify (driver only)						-5 pts
+Disqualification from qualifying (driver only)				-10 pts
+
+
+Race
+Finished Race										1 pt
+Finished race, position gained (per place gained, max. +10 pts)				2 pts
+Finished ahead of team mate (driver only)						3 pts
+Fastest lap (driver only)								5 pts
+Started race within Top 10, finished race but lost position				-2 pts
+Started race outside Top 10, finished race but lost position				-1 pt
+Not classified (driver only)								-15 pts
+Disqualification from race (driver only)						-20 pts

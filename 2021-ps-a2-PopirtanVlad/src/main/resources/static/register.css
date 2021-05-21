@@ -1,0 +1,48 @@
+body, html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Add styles to the form container */
+.container {
+    position: absolute;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    padding: 16px;
+    background: #f1f1f1;
+}
+
+/* Full-width input fields */
+input[type=email], input[type=password], input[type=text], input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 ;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #e50000;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}

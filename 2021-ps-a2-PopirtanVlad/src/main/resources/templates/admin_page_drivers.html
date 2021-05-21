@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{admin_page.css}">
+</head>
+<body>
+<div class="topnav fixed-top">
+    <a href="admin_page_users">Users</a>
+    <a class="active" href="admin_page_drivers">Drivers</a>
+    <a href="admin_page_constructors">Constructors</a>
+    <a href="admin_page_races">Races</a>
+</div>
+
+<div>
+    <table class="table table-striped table-dark p-5" style="margin-bottom: 10%">
+        <tr>
+            <th>Points</th>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Age</th>
+            <th>Nationality</th>
+            <th>Price</th>
+        </tr>
+        <tr th:each="driver : ${drivers}">
+            <td th:text="${driver.driver_points}"></td>
+            <td th:text="${driver.driver_name}"></td>
+            <td th:text="${driver.driver_nr}"></td>
+            <td th:text="${driver.driver_age}"></td>
+            <td th:text="${driver.driver_nationality}"></td>
+            <td th:text="${driver.driver_price}"></td>
+            <td><a class="btn btn-outline-light mb-4" th:href="@{/deleteDriver/{id}(id=${driver.driver_id})}" >Delete</a></td>
+        </tr>
+    </table>
+    <footer class="bg-dark text-center text-white fixed-bottom">
+        <div class="container p-2 pb-0">
+            <form class="form-outline form-white mb-4" action="#" th:action="@{/addDriver}" th:object="${driverDto}" method="post">
+                <label>Driver name</label>
+                <input type="text" placeholder="Driver name"  th:field="*{driver_name}" required>
+
+                <label class="form-label">Driver Number</label>
+                <input type="text" placeholder="Driver Number" name="name"  th:field="*{driver_nr}" required>
+
+                <label>Driver nationality</label>
+                <input type="text" placeholder="Driver nationality" th:field="*{driver_nationality}" required>
+                <br>
+                <label>Driver age</label>
+                <input type="text" placeholder="Driver age" th:field="*{driver_age}" required>
+
+                <label>Driver Price</label>
+                <input type="text" placeholder="Driver Price" th:field="*{driver_price}" required>
+
+                <label>Driver Points</label>
+                <input type="text" placeholder="Driver Points" th:field="*{driver_points}"required>
+                <br><br>
+                <select name="driverConstructor">
+                    <option th:each="constructor: ${constructors}" th:value="${constructor.constructor_id}" th:text="${constructor.constructor_name}"></option>
+                </select>
+                <button type="submit" class="btn btn-outline-light mb-4">Add Driver</button>
+            </form>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
