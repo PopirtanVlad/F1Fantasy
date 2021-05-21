@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CreateTeamCss.css">
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <aside>
+        <div class="sidenav">
+            <a class="active" href="my_teams">Teams</a>
+            <a href="leagues">Leagues</a>
+            <a href="#">Races</a>
+            <a href="#">Points Scoring</a>
+
+            <form th:action="@{/profile/downloadInfo}" th:method="post">
+                <p style="color: white; margin: 8%">Download Points Scoring in PDF or TXT format</p>
+                <select style="margin-left: 25% "name="pointsScoring">
+                    <option> TXT </option>
+                    <option> PDF</option>
+                </select><br>
+                <button style="margin-left: 18%" type="submit" class="btn">Download</button>
+            </form>
+        </div>
+    </aside>
+
+    <main>
+        <div class="main_container">
+            <header class="table_header">
+                <a href="CreateTeamPage.html">
+                    <img class="navigation" src="images/team.png">
+                </a>
+                <a href="select_driver_constructor.html">
+                    <img class="navigation" src="https://cdn3.iconfinder.com/data/icons/people-avatar-13/512/16-512.png">
+                </a>
+            </header>
+            <main>
+                <ol style="padding: 25%; list-style:none">
+                    <li>
+                        <div class="top">
+                            <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png">
+                            <label>Max Verstappen</label>
+                            <br><label>Points: </label>
+                        </div>
+                    </li>
+                    <li >
+                        <div class="top">
+                                <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png">
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="top_right" style="float: right">
+                            <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="center_left">
+                            <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png">
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="center_right">
+                            <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png">
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bot">
+                            <img src="https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/2col/image.png">
+
+                        </div>
+                    </li>
+                </ol>
+            </main>
+        </div>
+    </main>
+
+
+
+</body>
+</html>

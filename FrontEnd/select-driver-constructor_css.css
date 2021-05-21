@@ -1,0 +1,144 @@
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #e50000;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #dddddd;
+    display: block;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    background-color: darkred;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 75% 1%;
+    grid-template-rows:100%;
+    margin: 20%;
+    margin-top: 8%;
+    height: 600px;
+    width: 75%;
+}
+
+.driver_picker{
+    background-color: dodgerblue;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-style: solid;
+    border-color: dodgerblue;
+}
+
+
+.chooseDrivers{
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.chooseDriversRow:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.chooseDriversRow{
+    height: 90px;
+    width: 100%;
+    background-color: white;
+}
+
+img{
+    max-width:70px;
+    max-height:100%;
+    border-radius: 50%;
+    background-color: darkgray;
+}
+
+.addbutton{
+    height: 50%;
+    width: 20%;
+    background-color: red;
+    font-size: 200%;
+    color: #dddddd;
+}
+
+.table_header{
+    height: 7%;
+    width: 100%;
+    background-color: lightblue;
+    border-color: dodgerblue;
+    border-style: solid;
+}
+
+.chosenDrivers{
+    margin-left: 80%;
+    margin-top: 0%;
+    height: 450px;
+    width: 300px;
+    background-color: #003366;
+    float: right;
+}
+.finish{
+    margin: 1%;
+    background-color: #F3EFE0;
+    border-style: outset;
+    border-color: darkblue;
+    width: 98%;
+    height: 12%;
+}
+.finish:hover{
+    border-style: inset;
+    background-color: #dddddd;
+}
+
+.selectDriversTable{
+    table-layout: fixed;
+    margin:1%;
+    width: 98%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.selectDriversRow{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+}
+
+.selectedDriversimg{
+    max-width:40px;
+    max-height:100%;
+    border-radius: 15%;
+    background-color: darkgray;
+}
+
+.navigation{
+    background-color: whitesmoke;
+}
+.navigation:hover{
+    background-color: darkgrey;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

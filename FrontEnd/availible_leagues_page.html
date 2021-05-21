@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="leagues_page_css.css">
+</head>
+<body>
+<aside>
+    <div class="sidenav">
+        <a class="active" href="my_teams">Teams</a>
+        <a href="leagues">Leagues</a>
+        <a href="#">Races</a>
+
+        <form th:action="@{/profile/downloadInfo}" th:method="post">
+            <p style="color: white; margin: 8%">Download Points Scoring in PDF or TXT format</p>
+            <select style="margin-left: 25% "name="pointsScoring">
+                <option> TXT </option>
+                <option> PDF</option>
+            </select><br>
+            <button style="margin-left: 18%" type="submit" class="btn">Download</button>
+        </form>
+    </div>
+</aside>
+
+<main>
+    <div class="navigation" style="border-style: solid">
+        <ul class="nav nav-pills">
+            <li class="nav-item" >
+                <a  href="availible_leagues_page.html" class="nav-link active" style="border-radius: 0%; background-color: dimgrey">Availible</a>
+            </li>
+            <li class="nav-item">
+                <a href="joined_leagues_page.html" class="nav-link" style="border-radius: 0%" >Joined</a>
+            </li>
+        </ul>
+</main>
+</body>
+</html>

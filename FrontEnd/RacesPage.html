@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> <link rel="stylesheet" href="RacesCss.css">
+
+</head>
+<body>
+    <aside>
+        <div class="sidenav">
+            <a class="active" href="my_teams">Teams</a>
+            <a href="leagues">Leagues</a>
+            <a href="RacesPage.html">Races</a>
+            <a href="#">Points Scoring</a>
+
+            <form th:action="@{/profile/downloadInfo}" th:method="post">
+                <p style="color: white; margin: 8%">Download Points Scoring in PDF or TXT format</p>
+                <select style="margin-left: 25% "name="pointsScoring">
+                    <option> TXT </option>
+                    <option> PDF</option>
+                </select><br>
+                <button style="margin-left: 18%" type="submit" class="btn">Download</button>
+            </form>
+        </div>
+    </aside>
+
+    <main>
+        <div class="main_container">
+            <ol>
+                <a href="CreateTeamPage.html">
+                    <li>
+                        <header class="race_header">
+                            <h1 class="date">30-02 Feb</h1>
+                            <img class="country_flag" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png">
+                        </header>
+                        <hr>
+                            <h2 class="date">France</h2>
+                            <br>
+                            <h4 class="date">Salut</h4>
+                        <hr>
+                        <img class="circuit" src="https://f1destinations.com/wp-content/uploads/2018/02/RaceCircuitPaulRicard.png">
+                    </li>
+                </a>
+                <li>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </main>
+
+</body>
+</html>

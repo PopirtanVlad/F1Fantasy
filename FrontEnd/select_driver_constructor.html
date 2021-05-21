@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="select-driver-constructor_css.css">
+</head>
+  <body>
+    <aside>
+      <div class="sidenav">
+        <a class="active" href="my_teams">Teams</a>
+        <a href="leagues">Leagues</a>
+        <a href="#">Races</a>
+        <a href="#">Points Scoring</a>
+
+        <form th:action="@{/profile/downloadInfo}" th:method="post">
+          <p style="color: white; margin: 8%">Download Points Scoring in PDF or TXT format</p>
+          <select style="margin-left: 25% "name="pointsScoring">
+            <option> TXT </option>
+            <option> PDF</option>
+          </select><br>
+          <button style="margin-left: 18%" type="submit" class="btn">Download</button>
+        </form>
+      </div>
+    </aside>
+
+    <main>
+      <div class="container">
+        <div class="driver_picker">
+          <header class="table_header">
+            <a href="CreateTeamPage.html">
+              <img class="navigation" src="images/team.png">
+            </a>
+            <a href="select_driver_constructor.html">
+              <img class="navigation" src="https://cdn3.iconfinder.com/data/icons/people-avatar-13/512/16-512.png">
+            </a>
+          </header>
+          <table class="chooseDrivers">
+            <tr class="chooseDriversRow">
+              <td><img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+              <td>Price</td>
+              <td> <button class="addbutton" type="submit">X</button></td>
+            </tr>
+            <tr class="chooseDriversRow">
+              <td><img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+              <td>Price</td>
+              <td> <button type="submit"> X </button></td>
+            </tr>
+            <tr class="chooseDriversRow">
+              <td><img src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+              <td>Price</td>
+              <td> <button type="submit"></button></td>
+            </tr>
+            <tr></tr>
+
+          </table>
+        </div>
+        <form class="chosenDrivers">
+        <button class="finish" type="submit">Finish</button>
+          <table class="selectDriversTable">
+            <tr class="selectDriversRow">
+              <td><img class="selectedDriversimg" src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+              <td>Price</td>
+            </tr>
+            <tr class="selectDriversRow">
+              <td><img class="selectedDriversimg" src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+            </tr>
+            <tr class="selectDriversRow">
+              <td><img class="selectedDriversimg" src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+            </tr>
+            <tr class="selectDriversRow">
+              <td><img class="selectedDriversimg" src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+            </tr>
+            <tr class="selectDriversRow">
+              <td><img class="selectedDriversimg" src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+            </tr>
+            <tr class="selectDriversRow">
+              <td><img class="selectedDriversimg" src="https://www.formula1.com/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png.transform/2col/image.png"> </td>
+              <td>Lewis Hamilton</td>
+            </tr>
+            <tr></tr>
+          </table>
+          <div style="background-color: white; width: 98%; height: 5%; border-style: dotted">
+            <label>Team Name: </label>
+            <input type="text">
+          </div>
+          <button class="finish" type="submit">Cancel</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

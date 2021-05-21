@@ -1,0 +1,45 @@
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #e50000;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #dddddd;
+    display: block;
+}
+
+
+.sidenav a:hover {
+    background-color: darkred;
+}
+
+main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+.main_container{
+    margin: auto auto;
+    margin-top: 6%;
+    width: 800px;
+    height: 700px;
+    background-image: url("https://centaur-wp.s3.eu-central-1.amazonaws.com/designweek/prod/content/uploads/2018/01/19151152/FORMULA-1%C2%AE-UNLEASHES-NEW-BRAND-IDENTITY-INSPIRED-BY-ITS-FANS-OPTION-2.jpg");
+    background-size: 800px 700px;
+}
+
+.navigation{
+    margin-left: 1.5%;
+    width: 10.07%;
+
+}
